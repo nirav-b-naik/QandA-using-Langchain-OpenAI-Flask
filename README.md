@@ -28,3 +28,7 @@ source env01/bin/activate
 - Go to the terminal and run command: python app.py
 - Put your question.
 - It will generate answer based on documents.
+
+
+# NOTE: THIS REPOSITORY / PROJECT CREATED FOR LEARNING PURPOSE ONLY.
+````````````````````````````````````````````````````````````````````
