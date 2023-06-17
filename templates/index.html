@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Answer App</title>
+    <style>
+        body {
+            background-image: url("/static/pattern.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: Cambria;
+        }
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            
+            border-radius: 50px;
+        }
+        h1 {
+            text-align: center;
+            font-family: Cambria;
+        }
+        label {
+            display: block;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-family: Cambria;
+        }
+        input[type="text"] {
+            width: 95%;
+            padding: 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Cambria;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: Cambria;
+        }
+        .answer {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: Cambria;
+        }
+        .topics {
+            margin-top: 40px;
+            margin: 50px;
+            text-align: center;
+            font-family: Cambria;
+        }
+        .topics img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 5px;
+            image-align: center;
+            font-family: Cambria;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Question Answer App</h1>
+        <form method="POST" action="/">
+            <label for="question">Enter your question:</label>
+            <input type="text" id="question" name="question" required>
+            <input type="submit" value="Submit">
+        </form>
+        {% if answer %}
+            <div class="answer">
+                <h3>Answer:</h3>
+                <p>{{ answer }}</p>
+            </div>
+        {% endif %}
+        <div class="topics">
+            <h3>Topics:</h3>
+            <h3>Ant, Cougar, Koala, Giant Panda, Lobster, Butterfly, Dragonfly, Eel, Zebra, Octopus</h3>
+            <img src="{{ url_for('static', filename='ant.jpg') }}" alt="Ant">
+            <img src="{{ url_for('static', filename='cougar.jpg') }}" alt="Cougar">
+            <img src="{{ url_for('static', filename='koala.jpg') }}" alt="Koala">
+            <img src="{{ url_for('static', filename='giant_panda.jpg') }}" alt="Giant Panda">
+            <img src="{{ url_for('static', filename='lobster.jpg') }}" alt="Lobster">
+        </div>
+    </div>
+</body>
+</html>

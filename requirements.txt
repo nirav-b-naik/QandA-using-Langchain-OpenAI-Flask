@@ -1,0 +1,10 @@
+pandas
+openai
+langchain==0.0.160
+chroma
+chromadb
+tiktoken
+torch
+os
+unstructured
+flask
